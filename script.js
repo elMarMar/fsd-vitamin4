@@ -40,9 +40,9 @@ const question2 = () => {
 
   /** YOUR CODE HERE */
   addTodoButton.addEventListener('click', ()=>{    
-    if(taskName.value) {
+    if(taskName.value.trim()) {
       const newTask = document.createElement("li");
-      newTask.textContent = taskName.value;
+      newTask.textContent = taskName.value.trim();
 
       todoListUl.appendChild(newTask);
       taskName.value = "";
